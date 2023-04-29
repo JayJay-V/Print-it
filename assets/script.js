@@ -52,7 +52,9 @@ arrowLeft.onclick = function() {
 		number--;
 		/* ma variable newImage me ramène aux slides - L.1 js
 		   en y ajoutant le calcul de l'opérateur en question
-		   là mon number équivaut à -1 - L.52 js 		
+		   là mon number équivaut à -1 - L.52 js 
+		   
+		   [] " ? ? ? "
 		*/
 		let newImage = slides[number];
 		/* on cherche a modifier l'url de notre image, pour ça on garde la même chaine de caractère "string" en modifiant
@@ -63,8 +65,6 @@ arrowLeft.onclick = function() {
 		   + -> en y ajoutant 
 		   newImage -> me situe sur mes slides - L.56
 		   image -> représente le nom de nos slides, exemple "slide2.jpg" - L.1 js
-
-		   [] " ? ? ? "
 		*/
 		let newUrl = "./assets/images/slideshow/"+newImage.image;
 		// indique la modification de mon image.src à ma nouvelle url - L.67 js
