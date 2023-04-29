@@ -51,8 +51,8 @@ arrowLeft.onclick = function() {
 		// mon opérateur d'affectation
 		number--;
 		/* ma variable newImage me ramène aux slides - L.1 js
-		   en y ajoutant le calcul de l'opérateur en question,
-		   	là mon number équivaut à -1 - L.52 js 		
+		   en y ajoutant le calcul de l'opérateur en question
+		   là mon number équivaut à -1 - L.52 js 		
 		*/
 		let newImage = slides[number];
 		/* on cherche a modifier l'url de notre image, pour ça on garde la même chaine de caractère "string" en modifiant
@@ -60,9 +60,11 @@ arrowLeft.onclick = function() {
 		   	souhaité - L.1 js
 
 		   string -> "./assets/images/slideshow/"
-		   + -> en y ajoutant , 
+		   + -> en y ajoutant 
 		   newImage -> me situe sur mes slides - L.56
 		   image -> représente le nom de nos slides, exemple "slide2.jpg" - L.1 js
+
+		   [] " ? ? ? "
 		*/
 		let newUrl = "./assets/images/slideshow/"+newImage.image;
 		// indique la modification de mon image.src à ma nouvelle url - L.67 js
@@ -71,7 +73,10 @@ arrowLeft.onclick = function() {
 		   " ? ? ? "
 		*/
 		image.dataset.number = number;
-		// récupère le texte de notre image et le remplace par le nouveau texte a introduire selon l'image apparente - L.1 js
+		/* récupère le texte de notre image et le remplace par le nouveau texte a introduire selon l'image apparente
+		    grâce à newImage qui nous indique bien le slide en question où nous sommes - L.57 js
+		   puis en ajoutant le tagLine correspondant indiqué - L.1 js
+		*/
 		txt.innerHTML = newImage.tagLine;
 	}	
 }
@@ -98,8 +103,8 @@ arrowRight.onclick = function() {
 let numberImage = slides.length;
 // n est identifié comme un compteur de base
 let n = 0;
-/* while permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. Si n < numberImage, alors n+1 
-   et ainsi de suite jusqu'à ne plus pouvoir appliquer cette condition 
+/* while permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée.
+   Si n < numberImage, alors n+1 et ainsi de suite jusqu'à ne plus pouvoir appliquer cette condition 
 */
 while (n < numberImage) {
 	// créer la div
@@ -112,7 +117,8 @@ while (n < numberImage) {
 	  }
 	// ajoute dot au parent dots
 	dots.append(dot);
-	// opérateur affectation à la fin sauf cas précis
+	/* de préférence, placer l'opérateur d'affectation à la fin sauf cas précis comme un calcul a utiliser
+	    à l'intérieur même d'une fonction */
 	// n++ = n+1
   	n++;
 }
