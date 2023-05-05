@@ -39,7 +39,6 @@ arrowLeft.addEventListener("click", () => {
 	dots[n].classList.add("dot_selected");	
 });
 
-
 // Arrow Right
 // Arrow Function
 arrowRight.addEventListener("click", () => {
